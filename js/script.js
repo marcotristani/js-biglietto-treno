@@ -5,14 +5,14 @@
 const kmtogo = parseFloat( prompt( "Inserire km da percorrere" ) );// usato parseFloat perchè possiamo accettari valori in km  con la virgola
 const ageUser = parseInt( prompt( "Inserire età del passeggero" ) );// usato parceInt perchè possiamo accettare solo vaoli interi di età
 console.log("Km da percorrere:", kmtogo, "Età passeggero:", ageUser );
-let priceTiketReduced = "Nessuna riduzione per la vostra età"
+let priceTiketReduced = "Nessuna riduzione per la vostra età";
 //ELABORAZIONE
 //verificare i dati in entrata se sono corretti
 if ( Number.isNaN(kmtogo) || Number.isNaN(ageUser) ) {
     alert( "Reinserire i dati,ricaricare la pagina" );
 }
 //calcolare prezzo totale del biglietto 0.21£*km da percorrere
-let priceTiket = kmtogo * (0.21) ;
+let priceTiket = kmtogo * 0.21;
 console.log("prezzo intero:", priceTiket );
 //se minori di 18 anni il rezzo totale del biglietto va scontato del 20%
 if ( ageUser < 18 ) {
@@ -28,5 +28,6 @@ if ( ageUser < 18 ) {
 //OUTPUT
 document.getElementById("priceTiket").innerHTML = priceTiket;
 document.getElementById("priceTiketReduced").innerHTML = priceTiketReduced;
-document.getElementById("kmtogo").innerHTML = kmtogo.toString();
-document.getElementById("ageUser").innerHTML = ageUser.toString();
+document.getElementById("kmtogo").innerHTML = kmtogo;
+document.getElementById("ageUser").innerHTML = ageUser;
+
